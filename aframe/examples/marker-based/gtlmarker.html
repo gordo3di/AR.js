@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>AR.js Custom Marker Example</title>
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    <!-- Use the AR.js build for marker-based AR -->
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+</head>
+<body style="margin: 0; overflow: hidden;">
+
+
+
+    <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
+        <!-- Define the custom marker using your .patt file -->
+        <!-- <a-marker type="pattern" url="gtldesign.patt" markerhandler> -->
+            <a-marker preset="hiro" markerhandler>
+            <!-- The content to show when the marker is detected: a simple image -->
+            <!-- Adjust src to your image URL, and tweak position, rotation, scale as needed -->
+
+            <!-- <a-image animation="property: scale; from: 0.5 0.1 0.1; to: 1 0.3 0.3; loop: true; dur: 2000; easing: linear" src="https://static.wixstatic.com/media/c54655_216d32837ac74f2bb5f334093cd5babd~mv2.png/v1/fill/w_830,h_115,al_c,lg_1,q_85,enc_avif,quality_auto/c54655_216d32837ac74f2bb5f334093cd5babd~mv2.png" position="0 0 0" rotation="-90 0 0" ></a-image> -->
+            <!--
+            position = -left +right, -down +up, -backwards +forwards
+            rotation = 
+            -->
+
+            <!-- Ground Image and Text -->
+            <a-image src="https://static.wixstatic.com/media/c54655_1d980500d8ff4e159736550ddfcede57~mv2.jpg"
+            position="0 0 0.45" rotation="-90 0 0" scale="1.6 0.75 1"></a-image>
+<a-text value="WWW.GTLDESIGN.COM"
+          position="0 0.25 0.5"
+          align="center"
+          color="black"
+          font="monoid"
+          width="2">
+        </a-text>
+
+
+            <!-- Robot -->
+            <a-image src="https://static.wixstatic.com/media/c54655_d073f330f5154a41bada3e761a5ff8a4~mv2.png"
+            position="-1.2 0.5 0.29" rotation="0 45 0" scale="0.75 1.1 1"></a-image>
+
+            <!-- Boardwalk -->
+            <a-image src="https://static.wixstatic.com/media/c54655_050a15ee568141d6bf61f2c7e89ea4c4~mv2.jpg"
+            position="0.75 0.5 -0.3" rotation="-45 -25 0" scale="1.4 0.5 1"></a-image>
+
+            <!-- Log Cabin -->
+            <a-image src="https://static.wixstatic.com/media/c54655_85cbb8d10bd14db595e572110de522cf~mv2.jpg"
+            position="1.5 0.5 -0.35" rotation="0 -45 0" scale="1.5 1 1"></a-image>
+
+            <!-- Train Station -->
+            <a-image src="https://static.wixstatic.com/media/c54655_9b5c79b8956f40539d3821f758c3b161~mv2.jpg"
+            position="-1.5 0.5 -0.4" rotation="0 25 0" scale="2 0.75 1"></a-image>            
+        
+            <!-- Loighting -->
+            <a-image src="https://static.wixstatic.com/media/c54655_111bf3adf21b4a45ae2dc3bad1b53885~mv2.jpg"
+            position="0.2 0.5 -1" rotation="0 0 0" scale="2 0.75 1"></a-image>  
+            
+            <!-- BUILDINGS -->
+            <a-image src="https://static.wixstatic.com/media/c54655_c074ac2df9cd492c929aa7688b8dff64~mv2.png"
+            position="-0.6 0.5 0" rotation="0 30 -0.1" scale="0.3 0.8 1"></a-image>  
+            
+            <a-image src="https://static.wixstatic.com/media/c54655_9d3ce661318b45178c4f2907a0d5fbfa~mv2.png"
+            position="-0.2 0.5 0" rotation="0 15 -0.1" scale="0.3 0.8 1"></a-image> 
+            
+            <a-image src="https://static.wixstatic.com/media/c54655_c481a574bfde4287bb2750b445134c17~mv2.png"
+            position="0.2 0.5 0" rotation="0 -15 -0.1" scale="0.3 0.8 1"></a-image> 
+
+            <a-image src="https://static.wixstatic.com/media/c54655_27c51ef2bbbe4fcf86becf2a99b13344~mv2.png"
+            position="0.6 0.5 0" rotation="0 -30 -0.1" scale="0.3 0.6 1"></a-image> 
+
+            <!--
+            <a-entity
+            rotation="0 0 0" 
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 20000"
+            position="0 0 0"
+            scale="0.03 0.03 0.03"
+            gltf-model="https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
+            ></a-entity>
+            -->
+
+
+        
+        </a-marker>
+        <!-- The camera entity -->
+        <a-entity id="camera" camera></a-entity>
+    </a-scene>
+
+</body>
+</html>"
